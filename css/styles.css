@@ -90,23 +90,22 @@
     top: 10px;
     left: 0;
 }
-.header-page-content {
+.brand {
     width: 100%;
     background-color: #F1E4E6;
 }
-.content-items {
+.brand-content {
     display: flex;
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
 }
-.header-page-img,
-.header-page-head {
+.brand-img {
     max-width: 800px;
     width: 100%;
 }
-/* ------------------ Создаем заголовок шапки старницы ---------------- */
-.brand {
+/* -------------------- Создаем блок брэнда старницы ------------------ */
+.brand-txt {
     color: #222222;
 }
 .brand-titles-wrapper {
