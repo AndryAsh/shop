@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /* Обнуляем стили по-умолчанию */
 * {
     margin: 0;
@@ -6,7 +13,12 @@
     font-style: normal;
 }
 .page-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
 }
@@ -20,6 +32,8 @@
     margin: auto;
 }
 .flex-add {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .flex-center {
@@ -27,8 +41,13 @@
 }
 /* -------------------------- Шапка страницы -------------------------- */
 .header-page-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 .header-page-nav {
@@ -36,29 +55,47 @@
     background-color: #222222;
 }
 .nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1130px;
     width: 100%;
     padding: 20px 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: auto;
 }
 .nav-item-logo-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 110px;
     width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
 }
 .nav-item-menu-user-basket {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 170px;
     width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
 }
 /* ------------------------ Создаем элемент меню ------------------------- */
 .menu-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 32px;
     height: 23px;
@@ -95,6 +132,8 @@
     background-color: #F1E4E6;
 }
 .brand-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1600px;
     width: 100%;
@@ -139,8 +178,10 @@
 }
 /* ----------------------- Блок категорий товаров --------------------- */
 .category-list {
+    display: -ms-grid;
     display: grid;
     /*grid-template-columns: minmax(auto, 360px) minmax(auto, 360px) minmax(auto, 360px);*/
+    -ms-grid-columns: minmax(auto, auto) 30px minmax(auto, auto) 30px minmax(auto, auto);
     grid-template-columns: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto);
     grid-gap: 30px;
     margin-top: 65px;
@@ -151,7 +192,10 @@
     position: relative;
 }
 .last-block {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-column: 1 / 4;
+    -ms-grid-row: 2;
     grid-row: 2;
 }
 .dark-background {
@@ -174,7 +218,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     /* --------------------------------------- */
 }
 .category-text-large {
@@ -203,8 +249,9 @@
     color: #9F9F9F;
 }
 .card-list {
+    display: -ms-grid;
     display: grid;
-    /*grid-template-columns: minmax(auto, 360px) minmax(auto, 360px) minmax(auto, 360px);*/
+    -ms-grid-template-columns: minmax(auto, 360px) minmax(auto, 360px) minmax(auto, 360px);
     grid-template-columns: minmax(auto, auto) minmax(auto, auto) minmax(auto, auto);
     grid-gap: 30px;
     margin-top: 48px;
@@ -213,12 +260,22 @@
     justify-items: center;
 }
 .img-card-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     background: #f7e4e2;
 }
 .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 .card-header {
@@ -274,14 +331,29 @@
     padding: 104px 0;
 }
 .features-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .features-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     max-width: 360px;
     width: 100%;
@@ -309,13 +381,26 @@
     background-repeat: no-repeat;
 }
 .subscribe-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .subscribe-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 97px;
     margin-bottom: 126px;
@@ -353,7 +438,11 @@
     background: #222224;
 }
 .social-wrapper {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 30px 0;
 }
@@ -363,11 +452,3 @@
     line-height: 19px;
     color: #FBFBFB;
 }
-
-
-
-
-
-
-
-
