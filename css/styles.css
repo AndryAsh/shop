@@ -11,16 +11,11 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
     font-style: normal;
+    text-decoration: none;
 }
-.page-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 100%;
+button {
+    border: none;
+    background: transparent;
 }
 .container {
     max-width: 2560px;
@@ -50,7 +45,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
 }
-.header-page-nav {
+.header-page {
     width: 100%;
     background-color: #222222;
 }
@@ -79,6 +74,48 @@
     -ms-flex-align: end;
     align-items: flex-end;
 }
+/* ------------------------ Создаем элемент меню ------------------------- */
+.menu-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 32px;
+    height: 23px;
+    border: none;
+    background: transparent;
+    color: #e8e8e8;
+}
+.menu-button:hover {
+    color: red;
+}
+.menu-button:active {
+    color: blue;
+}
+.menu-button-item {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: currentColor;
+    margin: auto;
+}
+.menu-button-item::before,
+.menu-button-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: currentColor;
+}
+.menu-button-item::before {
+    top: -10px;
+    left: 0;
+}
+.menu-button-item::after {
+    top: 10px;
+    left: 0;
+}
 .nav-item-menu-user-basket {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -90,42 +127,41 @@
     justify-content: space-between;
     -webkit-box-align: end;
     -ms-flex-align: end;
-    align-items: flex-end;
+    align-items: center;
 }
-/* ------------------------ Создаем элемент меню ------------------------- */
-.menu-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 32px;
-    height: 23px;
-    border: none;
-    background: transparent;
-}
-.menu-button-item {
+.button-basket {
     position: relative;
-    width: 100%;
-    height: 3px;
-    background: #e8e8e8;
-    margin: auto;
+    color: #ffffff;
 }
-.menu-button-item::before,
-.menu-button-item::after {
-    content: "";
-    display: block;
+.navbar-search,
+.navbar-user,
+.navbar-basket {
+    fill: #e8e8e8;
+    color: #ffffff;
+}
+.navbar-search:hover,
+.navbar-user:hover,
+.navbar-basket:hover {
+    fill:red;
+}
+.navbar-search:active,
+.navbar-user:active,
+.navbar-basket:active {
+    fill:blue;
+}
+.navbar-basket-txt {
     position: absolute;
-    content: "";
-    width: 100%;
-    height: 3px;
-    background: #e8e8e8;
-}
-.menu-button-item::before {
-    top: -10px;
-    left: 0;
-}
-.menu-button-item::after {
-    top: 10px;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 19px;
+    height: 19px;
+    border: 1px solid red;
+    border-radius: 50%;
+    color: currentColor;
+    background: red;
+    top: -8px;
+    right: -11px;
 }
 .brand {
     width: 100%;
@@ -277,6 +313,8 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+
+    position: relative;
 }
 .card-header {
     margin-top: 25px;
@@ -304,6 +342,51 @@
     font-size: 16px;
     line-height: 19px;
     color: #F16D7F;
+}
+.card-button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 38.3%;
+    min-height: 43px;
+    border: 1px solid #FFFFFF;
+    background: transparent;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 188px;
+    left: 32.7%;
+}
+.card-button svg {
+    fill: #fff;
+    margin: 0 11px 0 0;
+}
+.card:hover .img-card-wrapper {
+    background: #3A3838DB;
+}
+.card:hover .card-button {
+    display: flex;
+}
+.card:hover .card-button:hover {
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #000;
+}
+.card:hover .card-button:hover svg {
+    fill: #000000;
+}
+.card:hover .card-button:active {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.card:hover .card-button:active svg {
+    fill: #ffffff;
+}
+.card:hover .card-img {
+    filter: brightness(50%);
 }
 .card-list-button {
     background-color: white; 
@@ -357,6 +440,10 @@
     flex-direction: column;
     max-width: 360px;
     width: 100%;
+}
+.features-item svg {
+    fill: #f16d7f;
+    height: 40px;
 }
 .features-item h3 {
     margin-top: 24px;
@@ -423,21 +510,60 @@
 .subscribe-form-wrapper {
     text-transform: uppercase;
     font-size: 24px;
-    line-height: 167.2%;
+    /*line-height: 167.2%;*/
+    line-height: 40px;
     text-align: center;
     color: #222224;
     margin: 0 104px;
 }
-.subscribe-form h2 {
+.subscribe-title {
+    display: block;
     font-weight: 700;
 }
-.subscribe-form h3 {
+.subscribe-subtitle {
+    display: block;
     font-weight: 400;
+    font-size: 18px;
+}
+.subscribe-form {
+    position: relative;
+}
+.email {
+    margin-top: 20px;
+    height: 50px;
+}
+.subscribe-form-email {
+    border: none;
+    /*border-radius: 25px 0 0 25px;*/
+    border-radius: 25px 25px 25px 25px;
+    width: 323px;
+    background: #E1E1E1;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222224;
+    opacity: 0.67;
+    padding-left: 25px;
+}
+.subscribe-form-button {
+    position: absolute;
+    width: 100px;
+    border: 2px solid #F16D7F;
+    border-radius: 0 25px 25px 0;
+    background: #F16D7F;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    left: 248px;
+}
+.subscribe-form-button:hover {
+    text-decoration: underline;
 }
 .social-contacts {
     background: #222224;
 }
 .social-wrapper {
+    display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -451,4 +577,27 @@
     font-size: 16px;
     line-height: 19px;
     color: #FBFBFB;
+}
+.social-items {
+    display: flex;
+    justify-content: space-between;
+    width: 148px;
+    height: 32px;
+}
+.social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: #ffffff;
+    fill: #000000;
+}
+.social-item:hover {
+    background: #f16d7f;
+    fill: #ffffff;
+}
+.social-item:active {
+    background: green;
+    fill: #ffffff;
 }
