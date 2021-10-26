@@ -13,12 +13,10 @@
     font-style: normal;
     text-decoration: none;
 }
-
 button {
     border: none;
     background: transparent;
 }
-
 .container {
     max-width: 2560px;
     width: 100%;
@@ -79,6 +77,7 @@ button {
 }
 /* --------------------- Поиск ---------------------- */
 .search-icon-form {
+    /*width: 30px;*/
     width: 30px;
     height: 30px;
     margin: 0 0 0 30%;
@@ -97,6 +96,8 @@ button {
 }
 .search-icon-form-input:focus {
     z-index: 3;
+    width: 200px;
+    transition: width 2s linear;
 }
 .navbar-search {
     width: 100%;
@@ -104,7 +105,7 @@ button {
     fill: #fff;
 }
 .search-icon-form-input {
-    width: 200px;
+    width: 0;
     min-height: 20px;
     padding: 5px;
     outline: none;
@@ -989,7 +990,7 @@ button {
     display: block;
     width: 12px;
     height: 12px;
-    border: 1px solid #EBEBEB;
+    border: 1px solid #ebebeb;
     position: absolute;
     top: 1px;
     left: -23.5px;
@@ -1219,12 +1220,9 @@ button {
 .shopping-card-container {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(auto, 652px) minmax(auto, 360px);
+    grid-gap: 128px;
     margin: 96px 0 128px 0;
-}
-.shopping-card-wrp {
-    display: flex;
-    justify-content: left;
 }
 .card-product-list {
     display: flex;
@@ -1235,27 +1233,355 @@ button {
     justify-content: right;
 }
 .product-card {
-    display: flex;
-    max-width: 652px;
-    width: 100%;
+    display: grid;
+    grid-template-rows: minmax(auto, 306px);
+    grid-template-columns: minmax(auto, 262px) minmax(auto, 390px);
+    grid-gap: 31px;
+    box-shadow: 4px 4px 8px 5px rgba(87, 87, 87, 0.15);
 }
-.product-card > img {
-    display: block;
-    width: 262px;
-    height: 306px;
-    object-fit: contain;
-    margin: 0 auto;
+.shopping-card-img {
     background: #f3eeef;
+    box-sizing: border-box; 
+}
+.shopping-card-img > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .product-card:last-of-type {
     margin-top: 40px;
 }
-.product-card-buttons {
+.shopping-card-info {
+    max-width: 262px;
+    width: 100%;
+}
+.shopping-card-header {
+    display: block;
+    margin-top: 22px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #222222;
+}
+.shopping-card-txt {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #575757;
+    margin-top: 6px;
+}
+.shopping-card-price {
+    display: block;
+    margin-top: 42px;
+}
+.shopping-card-price > span {
+    color: #ef5b70;
+}
+.shopping-card-color,
+.shopping-card-size {
+    display: block;
+}
+.shopping-card-quantity {
+    display: block;
+    position: relative;
+}
+.shopping-card-quantity::after {
+    display: block;
+    position: absolute;
+    content: "2";
+    width: 44px;
+    height: 25px;
+    border: 1px solid #eaeaea;
+    text-align: center;
+    top: 0;
+    left: 119px;
+}
+.shopping-card-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 72px;
 }
-
-
+.shopping-card-list-button,
+.shipping-address-button {
+    display: block;
+    background-color: white; 
+    color: #000000;
+    border: 1px solid #a4a4a4;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+}
+.shopping-card-list-button:hover,
+.shipping-address-button:hover {
+    text-decoration: underline;
+}
+.shopping-card-list-button:active,
+.shipping-address-button:active {
+    text-decoration: none;
+    transform: scale(1.2);
+}
+.address {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+}
+.address-item,
+.input-fields {
+    display: block;
+    max-width: 360px;
+    width: 100%;
+    height: 45px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    padding-left: 18px;
+    color: #606060;
+    border: 1px solid #a4a4a4;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+.address-item,
+.input-fields {
+    margin-top: 20px;
+}
+.shipping-address {
+    display: block;
+    padding-top: 6px;
+}
+.shipping-address-country::placeholder,
+.input-fields::placeholder {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #b1b1b1;
+}
+.shipping-address-state::placeholder,
+.shipping-address-code::placeholder {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #222222;
+    padding-left: 18px;
+}
+/*.shipping-address-country::placeholder .shipping-address-country::first-letter,
+.input-fields::placeholder .input-fields::first-letter {
+    text-transform: uppercase;
+}*/
+.shipping-address-button {
+    margin: 20px 0 0 0;
+}
+.proceed-chekout {
+    margin-top: 57px;
+    max-width: 360px;
+    width: 100%;
+    height: 214px;
+    overflow: auto;
+    background: #f5f3f3;
+}
+.total-box {
+    display: flex;
+    justify-content: right;
+    margin: 40px 34px 0 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #4A4A4A;
+}
+.sub-total,
+.sub-summa,
+.grand-total
+.grand-summa {
+    display: block;
+}
+.sub-summa {
+    margin-left: 25px;
+}
+.grant-box {
+    display: flex;
+    justify-content: right;
+    margin: 12px 37px 0 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+}
+.grand-summa {
+    margin-left: 26px;
+    font-weight: 700;
+    color: #f16d7f;
+}
+.chekout-delimiter {
+    display: block;
+    margin: 21px auto 0 auto;
+    width: 275px;
+    border: none;
+    background-color: #e2e2e2;
+    color: #e2e2e2;
+    height: 1px;
+}
+.chekout-button,
+.registration-button {
+    display: block;
+    margin: 17px auto 0 auto;
+    padding: 16px 43px;
+    background: #f16d7f;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.chekout-button:hover,
+.registration-button:hover {
+    text-decoration: underline;
+}
+.chekout-button:active,
+.registration-button:active {
+    text-decoration: none;
+    transform: scale(1.1);
+}
+/* ---------------------- Страница registration -------------------- */
+.registration-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: minmax(auto, 360px) minmax(auto, 652px);
+    grid-gap: 128px;
+    margin: 64px 0 96px 0;
+}
+.registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.your-name,
+.login-details {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+}
+.your-name::first-letter,
+.login-details::first-letter,
+.radio-name::first-letter {
+    text-transform: uppercase;
+}
+.gender {
+    display: flex;
+    justify-content: left;
+    margin-top: 31px;
+}
+.radio {
+    display: none;
+}
+/*.female {
+    margin-left: 20px;
+}*/
+.radio-name {
+    display: inline-block;
+    position: relative;
+	cursor: pointer;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+}
+/*.radio-name::first-letter {
+    text-transform: uppercase;
+}*/
+.radio-name::before {
+    content: "";
+	display: inline-block;
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #a4a4a4;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.radio-male::after,
+.radio-female::after {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #a4a4a4;
+    border-radius: 50%;
+    background-color: #a4a4a4;
+    top: 3px;
+    left: 3px;
+}
+.radio:checked + .radio-male::after {
+    display: inline-block;
+}
+.radio:checked + .radio-female::after {
+    display: inline-block;
+}
+.radio-name:last-child {
+    margin-left: 20px;
+}
+.login-details {
+    margin-top: 33px;
+}
+.regulations {
+    display: block;
+    margin-top: 15px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #b1b1b1;
+}
+.registration-button {
+    max-width: 167px;
+    width: 100%;
+    margin: 39px 0 0 0;
+}
+.loyality-txt {
+    display: block;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+.loyality-box > h3 {
+    text-transform: uppercase;
+}
+.loyality-box > p {
+    margin-top: 22px;
+}
+.loyality-list {
+    margin-top: 21px;
+    list-style-type: none;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+.loyality-list > li:nth-child(n+1) {
+    margin-top: 16px;
+}
+.loyality-list > li:before {
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 16px;
+    border: none;
+    background-image: url("../img/check-black.png");
+    margin-right: 22px;
+}
 
   
