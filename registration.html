@@ -16,7 +16,7 @@
     <header class="header-page container">
         <!-- Блок навигации шапки-->
         <div class="nav-items">
-            <div class="nav-item-logo-search flex-add">
+            <div class="nav-left flex-add">
                 <a href="index.html"><img src="img/navbar_logo.svg" alt="Logo"></a>
                 <form action="search" class="search-icon-form">
                     <input class="search-icon-form-input" id="search" type="search" placeholder="Search ...">
@@ -29,7 +29,7 @@
                     </label>
                 </form>
             </div>
-            <div class="nav-item-menu-user-basket">
+            <div class="nav-right">
                 <!-- Мобильное меню -->
                 <nav class="menu">
                     <input type="checkbox" class="menu-button-input" id="menu">
@@ -143,10 +143,12 @@
                             <input class="radio" type="radio" name="radio" id="female" value="female">
                             <label for="female" class="radio-name radio-female">Female</label>
                             <!--<span class="radio-name">female</span>-->
+                            <input class="radio" type="radio" name="radio" id="other" value="other">
+                            <label for="other" class="radio-name radio-other">Other</label>
                         </div>
                         <h3 class="login-details">login details</h3>
-                        <input type="email" class="email input-fields" placeholder="Email" required>
-                        <input type="password" class="password input-fields" placeholder="Password" required>
+                        <input type="email" class="email-registration input-fields" placeholder="Email" required>
+                        <input type="password" class="password-registration input-fields" placeholder="Password" required>
                         <p class="regulations">Please use 8&nbsp;or more characters, with at&nbsp;least 1&nbsp;number
                             and
                             a&nbsp;mixture of&nbsp;uppercase and lowercase letters</p>
