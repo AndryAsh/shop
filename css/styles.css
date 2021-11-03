@@ -24,13 +24,13 @@ button {
     width: 100%;
 }
 .content-container {
-    /*width: 71.25vw;*/
+    max-width: 1140px;
     width: 100%;
     margin: 0 auto;
 }
 .flex-add {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    /*display: -webkit-box;
+    display: -ms-flexbox;*/
     display: flex;
 }
 .flex-center {
@@ -38,13 +38,8 @@ button {
 }
 /* -------------------------- Шапка страницы -------------------------- */
 .header-page-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 .header-page {
@@ -56,30 +51,21 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 70.625vw;
+    max-width: 1130px;
     width: 100%;
     padding: 1.25vw 0;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: auto;
 }
 .nav-left {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     max-width: 110px;
     width: 100%;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
     align-items: flex-end;
 }
 /* --------------------- Поиск ---------------------- */
 .search-icon-form {
-    /*width: 30px;*/
     width: 30px;
     height: 30px;
     margin: 0 0 0 30%;
@@ -172,10 +158,13 @@ button {
     display: block;
     position: absolute;
     visibility: hidden;
-    padding: 1.0625vw 0 0 2.125vw;
+    /*padding: 1.0625vw 0 0 2.125vw;*/
+    padding: 1.0625rem 0 0 2.125rem;
     /*width: 18.2%;*/
-    width: 12%;
-    height: 46.6875vw;
+    /*width: 12%;*/
+    width: 14.4rem;
+    /*height: 46.6875vw;*/
+    height: 56rem;
     top: 100%;
     right: 0;
     list-style-type: none;
@@ -311,10 +300,6 @@ button {
 .brand-titles-wrapper {
     position: relative;
     text-transform: uppercase;
-    /*margin-top: 290px;
-    margin-left: 93px;*/
-    /*margin-top: 18.125%;*/
-    /*margin-left: 93px;*/
     margin-top: 18.125vw;
     margin-left: 5.8125vw;
 }
@@ -427,8 +412,8 @@ button {
 }
 .card-list {
     display: grid;
-    /*grid-template-columns: 22.5vw 22.5vw 22.5vw;*/
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 22.5vw 22.5vw 22.5vw;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
     grid-gap: 1.875vw;
     margin-top: 3vw;
     margin-bottom: 3vw;
@@ -450,7 +435,8 @@ button {
     object-fit: contain;
 }
 .card-header {
-    margin: 1.5625vw 1.875vw 1.25vw 1.125vw;
+    /*margin: 1.5625vw 1.875vw 1.25vw 1.125vw;*/
+    margin: 24px 1.875vw 20px 1.125vw;
     box-sizing: border-box;
     /*margin-top: 1.5625vw;
     margin-left: 1.125vw;
@@ -465,7 +451,8 @@ button {
     color: #000000;
 }
 .card-txt {
-    margin-top: 0.75vw;
+    /*margin-top: 0.75vw;*/
+    margin-top: 12px;
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
@@ -473,7 +460,8 @@ button {
 }
 .card-price {
     display: block;
-    margin-top: 1.125vw;
+    /*margin-top: 1.125vw;*/
+    margin-top: 18px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -529,7 +517,8 @@ button {
     background-color: white; 
     color: #F26376;
     border: 1px solid #FF6A6A;
-    padding: 0.9375vw 2.1875vw;
+    /*padding: 0.9375vw 2.1875vw;*/
+    padding: 15px 35px;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -548,13 +537,15 @@ button {
 }
 /* --------------------------- Подвал страницы -------------------------*/
 .features {
-    margin-top: 5.9375vw;
+    /*margin-top: 5.9375vw;*/
+    margin-top: 95px;
     background: #222224;
 }
 .features-wrapper {
-    /*padding: 6.5vw 0;*/
+    padding: 6.5vw;
     max-height: 162.687vw;
     height: 100%;
+    overflow: hidden;
 }
 .features-content {
     display: flex;
@@ -583,14 +574,16 @@ button {
     height: 31px;
 }
 .features-item h3 {
-    margin-top: 1.5vw;
+    /*margin-top: 1.5vw;*/
+    margin-top: 24px;
     font-weight: 400;
     font-size: 19.96px;
     line-height: 24px;
     color: #FBFBFB;
 }
 .features-item span {
-    margin-top: 1vw;
+    /*margin-top: 1vw;*/
+    margin-top: 16px;
     padding: 0 1.8125vw;
     font-weight: 300;
     font-size: 13.972px;
@@ -605,26 +598,13 @@ button {
     background-repeat: no-repeat;
 }
 .subscribe-wrapper {
-    /*display: -webkit-box;
-    display: -ms-flexbox;*/
     display: flex;
-    /*-webkit-box-pack: justify;
-    -ms-flex-pack: justify;*/
     justify-content: space-between;
-    /*-webkit-box-align: center;
-    -ms-flex-align: center;*/
     align-items: center;
 }
 .subscribe-item {
-    /*display: -webkit-box;
-    display: -ms-flexbox;*/
     display: flex;
-    /*-webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;*/
     flex-direction: column;
-    /*-webkit-box-align: center;
-    -ms-flex-align: center;*/
     align-items: center;
     margin-top: 6.0625vw;
     margin-bottom: 7.875vw;
@@ -639,7 +619,8 @@ button {
     line-height: 24px;
     text-align: center;
     color: #222224;
-    margin-top: 1.5625vw;
+    /*margin-top: 1.5625vw;*/
+    margin-top: 25px;
 }
 .subscribe-text span {
     font-style: italic;
@@ -673,8 +654,10 @@ button {
     width:  100%;
 }
 .email {
-    margin-top: 1.25vw;
-    height: 3.125vw;
+    /*margin-top: 1.25vw;*/
+    margin-top: 20px;
+    /*height: 3.125vw;*/
+    height: 50px;
 }
 .subscribe-form-email {
     display: block;
@@ -718,13 +701,14 @@ button {
 }
 .social-wrapper {
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
+    /*-webkit-box-pack: justify;
+    -ms-flex-pack: justify;*/
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    /*-webkit-box-align: center;
+    -ms-flex-align: center;*/
     align-items: center;
-    padding: 1.875vw 0;
+    /*padding: 1.875vw 0;*/
+    padding: 30px 0;
 }
 .social-wrapper span {
     font-weight: 400;
@@ -805,8 +789,7 @@ button {
     position: relative;
 } 
 .toolbar {
-    margin-top: 3.125vw;
-    margin-bottom: 4.0625vw;
+    margin: 3.125vw 0 4.0625vw 0;
     overflow: auto;
 }
 .toolbar-filter {
@@ -837,7 +820,8 @@ button {
 .filter-lst {
     display: block;
     /*width: 22.5vw;*/
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
     font-weight:400;
     font-size: 14px;
     line-height: 17px;
@@ -1181,7 +1165,8 @@ button {
     display: block;
     width: 100%;
     background: #fff;
-    transform: translateY(-5.6vh);
+    /*transform: translateY(-5.6vh);*/
+    transform: translateY(-65px);
     border:  1px solid #eaeaea;
 }
 .product-description-header {
@@ -1190,7 +1175,8 @@ button {
     align-items: center;
 }
 .product-type {
-    margin-top: 4.03125vw;
+    /*margin-top: 4.03125vw;*/
+    margin-top: 64px;
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
@@ -1198,15 +1184,19 @@ button {
     color: #f16d7f;
 }
 .red-delimiter {
-    margin-top: 0.75vw;
-    width: 3.9375vw;
+    /*margin-top: 0.75vw;*/
+    margin-top: 12px;
+    /*width: 3.9375vw;*/
+    max-width: 63px;
+    width:  100%;
     height: 3px;
     border: none;
     background-color: #ef5b70;
     color: #ef5b70;
 }
 .advertising-phrase {
-    margin-top: 0.75vw;
+    /*margin-top: 0.75vw;*/
+    margin-top: 12px;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 18px;
@@ -1214,8 +1204,11 @@ button {
     color: #4d4d4d;
 }
 .content-description {
-    margin-top: 3vw;
-    width: 34.6875vw;
+    /*margin-top: 3vw;*/
+    margin-top: 48px;
+    /*width: 34.6875vw;*/
+    max-width: 555px;
+    width: 100%;
     text-align: center;
     font-weight: 300;
     font-size: 14px;
@@ -1223,7 +1216,8 @@ button {
     color: #5e5e5e;
 }
 .product-pice {
-    margin-top: 2vw;
+    /*margin-top: 2vw;*/
+    margin-top: 32px;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 24px;
@@ -1231,7 +1225,8 @@ button {
     color: #ef5b70;
 }    
 .gray-delimiter {
-    margin-top: 4.0625vw;
+    /*margin-top: 4.0625vw;*/
+    margin-top: 65px;
     width: 39vw;
     border: none;
     background-color: #eaeaea;
@@ -1241,7 +1236,8 @@ button {
 .filters-color-size-quantity {
     max-width: 373px;
     width: 100%;
-    margin-top: 4.0625vw;
+    /*margin-top: 4.0625vw;*/
+    margin-top: 65px;
 }
 .toolbar-list-color {
     width: 128px;
@@ -1637,37 +1633,36 @@ button {
 }
 .loyality-list {
     margin-top: 21px;
-    list-style-type: none;
+    margin-left: 27px;
+    list-style-image: url("../img/check-black.png");
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
     color: #000000;
 }
+.loyality-list > li {
+    padding-left: 22px;
+}
 .loyality-list > li:nth-child(n+1) {
     margin-top: 16px;
-}
-.loyality-list > li:before {
-    display: inline-block;
-    content: "";
-    width: 20px;
-    height: 16px;
-    border: none;
-    background-image: url("../img/check-black.png");
-    margin-right: 22px;
 }
 
 /* К-т пересчета 1 * 100 / 768 = 0.1302 */
 @media only screen and (max-width: 768px) {
 
     .content-container {
-        width: 95.874vw;
+        max-width: 734px;
+        width: 100%;
     }
     .nav-items {
         max-width: 91.6608vw;
         width: 100%;
-}
+    }
+    .menu-btn-lst {
+        height: 30rem;
+    }
     .brand-title {
-    `   font-weight: 900;
+        font-weight: 900;
         font-size: 44px;
         line-height: 52.8px;
     }
@@ -1675,7 +1670,7 @@ button {
         font-weight: 700;
         font-size: 24px;
         line-height: 28.8px;
-`   }
+    }
     .card-list-header {
         margin-top: 20.17vw;
     }
@@ -1759,6 +1754,9 @@ button {
         border-width: 1px 0 1px 0;
         border-color: #eaeaea;
     }
+    #product .card-list > li:last-child {
+        display: none;
+    }
 
     /* --------------------------- Страница card ------------------------- */
     .shopping-card-container {
@@ -1779,10 +1777,10 @@ button {
     }
     .card-shipping {
         display: grid;
-        grid-template-columns:  1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 15px;
     }
-
+    
     /* ---------------------- Страница registration --------------------- */
     .registration-container {
         grid-template-columns: minmax(auto, 360px) minmax(auto, 354px);
@@ -1799,9 +1797,6 @@ button {
         font-size: 16px;
         line-height: 19px;
     }
-    .loyality-list > li:nth-child(2) {
-    
-    }
 }
 
 /* К-т пересчета 1 * 100 / 375 = 0.2667 */
@@ -1813,6 +1808,10 @@ button {
     }
     .nav-right {
         width: 32px;
+    }
+    .menu-btn-lst {
+        width: 8.5rem;
+        height: 25rem;
     }
     .personal-area,
     .button-basket,
@@ -1929,7 +1928,8 @@ button {
     }
     .social-wrapper {
         flex-flow: column wrap;
-        padding: 11.4681vw 0 2.4003vw 0;
+        padding-top: 11.4681vw;
+        overflow: auto;
     }
     .social-wrapper span {
         order: 2;
@@ -1937,5 +1937,120 @@ button {
     }
     .social-items {
         order: 1;
+    }
+
+    /* -------------------------- Страница catalog ------------------------ */
+    .product-info-wrp {
+        flex-direction: column;
+    }
+    .breadgrumps {
+        margin-top: 32px;
+    }
+    .toolbar {
+        margin-top: 24px;
+    }
+    .filter {
+        display:  none;
+    }
+    .filter-wrp {
+        margin-left: -12px;
+        max-width: 330px;
+        width: 100%;
+    }
+    .filter-btn > svg {
+        width: 37px;
+        height: 25px;
+    }
+    .filter-font {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .filters-sort {
+        margin-right: 0;
+        max-width: 260px;
+        width: 100%;
+    }
+    .img-card-wrapper {
+        height: 111.4806vw;
+    }
+
+    /* -------------------------- Страница product ------------------------ */
+    .carousel-viewport {
+        height: 375px;
+    }
+    .product-description {
+        transform: translateY(0);
+        border-style: solid;
+        border-width: 1px 0 1px 0;
+        border-color: #eaeaea;
+    }
+
+    /* --------------------------- Страница card ------------------------- */
+
+    .shopping-card-container {
+        margin: 39px 0 96px 0;
+        grid-gap: 48px;
+    }
+    .shopping-card-header {
+        margin-top: 14px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .shopping-card-txt {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .shopping-card-quantity::after {
+        width: 24px;
+        height: 19px;
+        left: 80px;
+    }
+    .product-card {
+        grid-template-columns: 38.4048vw 47.0738vw;
+        grid-template-rows: 50.1396vw;
+        grid-gap: 4.8006vw;
+    }
+    .product-card:first-child > .shopping-card-img img{
+        object-fit: cover;
+    }
+    .product-card:last-of-type {
+        margin-top: 32px;
+    }
+    .shopping-card-price {
+        margin-top: 25px;
+    }
+    .shopping-card-buttons {
+        margin-top: 30px;
+    }
+    .shopping-card-list-button,
+    .shipping-address-button {
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: none;
+        padding: 15px 33px;
+    }
+    .shopping-card-list-button:first-letter,
+    .shipping-address-button:first-letter {
+        text-transform: uppercase;
+    }
+    .shopping-card-list-button:first-child {
+        margin-right: 1.2vw;
+    }
+    .shopping-card-list-button:last-child {
+        margin-left: 1.2vw;
+    }
+    .card-shipping {
+        grid-template-columns: 1fr;
+        grid-gap: 12.8016vw;
+    }
+    .proceed-chekout {
+        margin: 0;
+    }
+
+    /* ---------------------- Страница registration --------------------- */
+    .registration-container {
+        grid-template-columns: 1fr;
+        grid-gap: 10.4013vw;
+        margin: 10.668vw 0 25.6032vw 0;
     }
 }
