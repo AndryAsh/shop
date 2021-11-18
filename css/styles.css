@@ -36,6 +36,37 @@ button {
 .flex-center {
     margin: auto;
 }
+.close-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
+    border: none
+}
+.close-btn::before,
+.close-btn::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #6e6e6e;
+    border-radius: 50%;
+}
+.close-btn::before {
+    transform: rotate(45deg);
+}
+.close-btn::after {
+    transform: rotate(-45deg);
+}
+.close-btn:hover::before,
+.close-btn:hover::after {
+    background-color: #f16d7f;
+}
+.close-btn:active::before,
+.close-btn:active::after {
+    transform: scale(1.2);
+}
 /* -------------------------- Шапка страницы -------------------------- */
 .header-page-wrapper {
     display: flex;
@@ -205,6 +236,13 @@ button {
     font-size: 14px;
     line-height: 17px;
     color: #6F6E6E;
+}
+.close-btn-menu {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0.5625rem;
+    right: 0.5625rem;
 }
 /* ----------- Эффект наведения и активации элементов меню ------------ */
 .menu-btn-item > a:hover {
@@ -758,28 +796,28 @@ button {
     line-height: 29px;
     color: #f16d7f;
 }
-.breadgrumps {
+.breadcrumbs {
     display: flex;
     width: 210px;
     justify-content: space-around;
     list-style-type: none;
 }
-.breadgrumps a,
-.breadgrumps-item {
+.breadcrumbs a,
+.breadcrumbs-item {
     font-weight: 300;
     font-size: 14px;
     line-height: 17px;
     color: #636363;
 }
-.breadgrumps-item:last-child > a {
+.breadcrumbs-item:last-child > a {
     font-weight: 700;
     color: #f16d7f;
 }
-.breadgrumps a:hover {
+.breadcrumbs a:hover {
     font-weight: 700;
     color: #f16d7f;
 }
-.breadgrumps a:active {
+.breadcrumbs a:active {
     font-weight: 300;
     color: #f16d7f;
 }
@@ -1313,6 +1351,7 @@ button {
     margin-top: 40px;
 }
 .shopping-card-info {
+    position: relative;
     max-width: 262px;
     width: 100%;
 }
@@ -1347,16 +1386,30 @@ button {
     display: block;
     position: relative;
 }
-.shopping-card-quantity::after {
-    display: block;
-    position: absolute;
-    content: "2";
-    width: 44px;
+.quantity {
+    margin-left: 20px;
+    width: 35px;
     height: 25px;
     border: 1px solid #eaeaea;
+    text-align: center; 
+    color: #575757;   
+}
+.quantity::placeholder {
+    margin: 0 auto;
     text-align: center;
-    top: 0;
-    left: 119px;
+}
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.close-btn-card {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    /*top: 27px;
+    right: -70px;*/
+    top: 0.6875vw;
+    right: -4.375vw;
 }
 .shopping-card-buttons {
     display: flex;
@@ -1764,6 +1817,10 @@ button {
         grid-gap: 40px;
         margin: 64px 0 128px 0;
     }
+    .close-btn-card {
+        top: 2.6875vw;
+        right: -21.375vw;
+    }
     .shopping-card-buttons {
         justify-content: center;
         margin-top: 62px;
@@ -2009,6 +2066,9 @@ button {
         grid-template-columns: 38.4048vw 47.0738vw;
         grid-template-rows: 50.1396vw;
         grid-gap: 4.8006vw;
+    }
+    .close-btn-card {
+        right: 0.625vw;
     }
     .product-card:first-child > .shopping-card-img img{
         object-fit: cover;

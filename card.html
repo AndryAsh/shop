@@ -95,8 +95,10 @@
                                 </li>
                             </ul>
                         </li>
+                        <li>
+                            <button class="close-btn-menu close-btn" type="submit"></button>
+                        </li>
                     </ul>
-
                 </nav>
                 <a href="registration.html" class="personal-area">
                     <svg class="navbar-user" width="29" height="29" viewBox="0 0 29 29"
@@ -150,7 +152,10 @@
                             </span>
                             <span class="shopping-card-quantity shopping-card-txt">
                                 Quantity
+                                <input type="number" class="quantity" placeholder="2" min="0"
+                                    oninput="validity.valid||(value='');" step="1">
                             </span>
+                            <button class="close-btn-card close-btn" type="submit"></button>
                         </div>
                     </article>
                     <article class="product-card">
@@ -171,8 +176,10 @@
                             </span>
                             <span class="shopping-card-quantity shopping-card-txt">
                                 Quantity
-                                <!--<div class="shopping-card-quantity-number shopping-card-txt">2</div>-->
+                                <input type="number" class="quantity" placeholder="2" min="0"
+                                    oninput="validity.valid||(value='');" step="1">
                             </span>
+                            <button class="close-btn-card close-btn" type="submit"></button>
                         </div>
                     </article>
                     <div class="shopping-card-buttons">
